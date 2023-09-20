@@ -1,0 +1,332 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo:wght@800&display=swap');
+
+body {
+	background-color: #1A1A1D;
+}
+
+.mediaViewInfo {
+	--web-view-name: Mobile Select Odds;
+	--web-view-id: Mobile_Select_Odds;
+	--web-scale-to-fit: true;
+	--web-scale-to-fit-type: width;
+	--web-enable-scale-up: true;
+	--web-scale-on-resize: true;
+	--web-enable-deep-linking: true;
+}
+:root {
+	--web-view-ids: Mobile_Select_Odds;
+}
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	border: none;
+}
+#Mobile_Select_Odds {
+	position: absolute;
+	width: 414px;
+	height: 1400px;
+	background-color: rgba(26,26,29,1);
+	overflow: hidden;
+	--web-view-name: Mobile Select Odds;
+	--web-view-id: Mobile_Select_Odds;
+	--web-scale-to-fit: true;
+	--web-scale-to-fit-type: width;
+	--web-enable-scale-up: true;
+	--web-scale-on-resize: true;
+	--web-enable-deep-linking: true;
+}
+#Title_dv {
+	position: absolute;
+	width: 156px;
+	height: 80px;
+	left: 13px;
+	top: 14px;
+	overflow: visible;
+}
+#WINNING___WAGERS_dw {
+	left: 0px;
+	top: 0px;
+	position: absolute;
+	overflow: visible;
+	width: 157px;
+	height: 80px;
+	text-align: left;
+	font-family: Archivo;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 20px;
+	color: rgba(255,255,255,1);
+}
+#Odds_Section_bh {
+	position: absolute;
+	width: 350px;
+	height: 100px;
+	left: 35px;
+	top: 162px;
+	overflow: visible;
+}
+#Rectangle_1_dy {
+	fill: rgba(217,217,217,0);
+	stroke: rgba(149,7,64,1);
+	stroke-width: 3px;
+	stroke-linejoin: miter;
+	stroke-linecap: butt;
+	stroke-miterlimit: 4;
+	shape-rendering: auto;
+}
+.Rectangle_1_dy {
+	position: absolute;
+	overflow: visible;
+	width: 358px;
+	height: 547px;
+	left: 0px;
+	top: 0px;
+}
+#Username_Box_dz {
+	position: absolute;
+	width: 155.996px;
+	height: 97px;
+	left: 23.004px;
+	top: 90px;
+	overflow: visible;
+}
+
+#Ellipse_1_cn {
+	fill: rgba(217,217,217,1);
+	border-radius: 50px;
+}
+.Ellipse_1_cn {
+	position: absolute;
+	overflow: visible;
+	width: 44px;
+	height: 44px;
+	left: 0px;
+	top: 0px;
+}
+#Rectangle_3_d {
+	fill: rgba(217,217,217,0.071);
+	stroke: rgba(255,255,255,1);
+	stroke-width: 1px;
+	stroke-linejoin: miter;
+	stroke-linecap: butt;
+	stroke-miterlimit: 4;
+	shape-rendering: auto;
+}
+.Rectangle_3_d {
+	overflow: visible;
+	position: absolute;
+	width: 155.996px;
+	height: 97px;
+	left: 0px;
+	top: 0px;
+	transform: matrix(1,0,0,1,0,0);
+}
+#SPORT_d {
+	left: 44.996px;
+	top: 22px;
+	position: absolute;
+	overflow: visible;
+	width: 86px;
+	height: 38px;
+	text-align: left;
+	font-family: Archivo;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 20px;
+	color: rgba(255,255,255,1);
+}
+#Username_Box_d {
+	position: absolute;
+	width: 150.153px;
+	height: 97px;
+	left: 199.847px;
+	top: 90px;
+	overflow: visible;
+}
+#Rectangle_3_ea {
+	fill: rgba(217,217,217,0.071);
+	stroke: rgba(255,255,255,1);
+	stroke-width: 1px;
+	stroke-linejoin: miter;
+	stroke-linecap: butt;
+	stroke-miterlimit: 4;
+	shape-rendering: auto;
+}
+.Rectangle_3_ea {
+	overflow: visible;
+	position: absolute;
+	width: 150.153px;
+	height: 97px;
+	left: 0px;
+	top: 0px;
+	transform: matrix(1,0,0,1,0,0);
+}
+
+.swal2-input {
+
+	font-family: 'Archivo';
+}
+
+.swal2-input-label {
+	font-family: 'Archivo';
+}
+
+
+#SPORT_ea {
+	left: 43.153px;
+	top: 22px;
+	position: absolute;
+	overflow: visible;
+	width: 87px;
+	height: 38px;
+	text-align: left;
+	font-family: Archivo;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 20px;
+	color: rgba(255,255,255,1);
+}
+#Profile_d {
+	position: absolute;
+	width: 185px;
+	height: 44px;
+	left: 229px;
+	top: 21px;
+	overflow: visible;
+}
+#Ellipse_1_d {
+	fill: rgba(217,217,217,1);
+}
+.Ellipse_1_d {
+	position: absolute;
+	overflow: visible;
+	width: 44px;
+	height: 44px;
+	left: 0px;
+	top: 0px;
+}
+#USERNAME_d {
+	left: 62px;
+	top: 9px;
+	position: absolute;
+	overflow: visible;
+	width: 124px;
+	height: 25px;
+	text-align: left;
+	font-family: Archivo;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 18px;
+	color: rgba(255,255,255,1);
+}
+
+.button-78 {
+	align-items: center;
+	appearance: none;
+	background-clip: padding-box;
+	background-color: initial;
+	background-image: none;
+	border-style: none;
+	box-sizing: border-box;
+	color: #fff;
+	cursor: pointer;
+	display: inline-block;
+	flex-direction: row;
+	flex-shrink: 0;
+	font-family: Eina01,sans-serif;
+	font-size: 16px;
+	font-weight: 800;
+	justify-content: center;
+	line-height: 24px;
+	margin: 0;
+	min-height: 64px;
+	outline: none;
+	overflow: visible;
+	padding: 19px 26px 19px 26px;
+	pointer-events: auto;
+	position: relative;
+	text-align: center;
+	text-decoration: none;
+	text-transform: none;
+	user-select: none;
+	-webkit-user-select: none;
+	touch-action: manipulation;
+	vertical-align: middle;
+	width: auto;
+	word-break: keep-all;
+	z-index: 0;
+  }
+  
+  @media (min-width: 768px) {
+	.button-78 {
+	  padding: 19px 32px;
+	}
+  }
+  
+  .button-78:before,
+  .button-78:after {
+	border-radius: 80px;
+  }
+  
+  .button-78:before {
+	background-image: linear-gradient(92.83deg, #ff7426 0, #f93a13 100%);
+	content: "";
+	display: block;
+	height: 100%;
+	left: 0;
+	overflow: hidden;
+	position: absolute;
+	top: 0;
+	width: 100%;
+	z-index: -2;
+  }
+  
+  .button-78:after {
+	background-color: initial;
+	background-image: linear-gradient(#541a0f 0, #0c0d0d 100%);
+	bottom: 4px;
+	content: "";
+	display: block;
+	left: 4px;
+	overflow: hidden;
+	position: absolute;
+	right: 4px;
+	top: 4px;
+	transition: all 100ms ease-out;
+	z-index: -1;
+  }
+  
+  .button-78:hover:not(:disabled):before {
+	background: linear-gradient(92.83deg, rgb(255, 116, 38) 0%, rgb(249, 58, 19) 100%);
+  }
+  
+  .button-78:hover:not(:disabled):after {
+	bottom: 0;
+	left: 0;
+	right: 0;
+	top: 0;
+	transition-timing-function: ease-in;
+	opacity: 0;
+  }
+  
+  .button-78:active:not(:disabled) {
+	color: #ccc;
+  }
+  
+  .button-78:active:not(:disabled):before {
+	background-image: linear-gradient(0deg, rgba(0, 0, 0, .2), rgba(0, 0, 0, .2)), linear-gradient(92.83deg, #ff7426 0, #f93a13 100%);
+  }
+  
+  .button-78:active:not(:disabled):after {
+	background-image: linear-gradient(#541a0f 0, #0c0d0d 100%);
+	bottom: 4px;
+	left: 4px;
+	right: 4px;
+	top: 4px;
+  }
+  
+  .button-78:disabled {
+	cursor: default;
+	opacity: .24;
+  }

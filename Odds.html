@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Odds</title>
+<link rel="stylesheet" type="text/css" id="applicationStylesheet" href="/css/Odds.css"/>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.4.28/dist/sweetalert2.all.min.js"></script>
+<link rel="stylesheet" href="@sweetalert2/theme-dark/dark.css">
+<script src="sweetalert2/dist/sweetalert2.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/xmlhttprequest@1.8.0/lib/XMLHttpRequest.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.4.28/dist/sweetalert2.all.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/7.14.1-0/firebase.js"></script>
+<script id="applicationScript" type="text/javascript" src="/js/Odds.js"></script>
+</head>
+<body onload="GetUpdatedProfile()">		
+	<div id="Odds">
+	<div id="Title">
+		<div id="WINNING___WAGERS">
+			<span>WINNING <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;         WAGERS</span>
+		</div>
+	</div>
+	<div id="Odds_Section">
+		
+	<!-- HTML !-->
+	<section>
+		<p id="t"></p>
+		<t id="k">&nbsp;&nbsp;&nbsp;&nbsp;Spreads &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Totals &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  Money Line &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   VS &nbsp;&nbsp;&nbsp;&nbsp;  &nbsp;&nbsp;&nbsp;&nbsp;  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  Spreads &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Totals &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Money Line </t>
+
+	</section>
+	<div class="column" id='b'></div>
+	<div class="column" id='d'></div>
+
+
+
+		
+	</div>
+	<div id="Vs">
+		<span></span>
+	</div>
+	<div id="Profile">
+		<ellipse id="Ellipse_1">
+			<img src='' alt="Avatar" class="Ellipse_1_cn" id="Ellipse_1_cn">
+	
+				</ellipse>
+		</svg>
+		<div id="USERNAME">
+			<span>USERNAME</span>
+		</div>
+	</div>
+	
+</div>
+<a href="/public/Select_Odds.html"><svg class="Vector_bc" viewBox="0 0 41 36">
+	<linearGradient id="Vector_bc" spreadMethod="pad" x1="0.327" x2="0.8" y1="0.789" y2="0.248">
+		<stop offset="0" stop-color="#530404" stop-opacity="1"></stop>
+		<stop offset="1" stop-color="#e21d73" stop-opacity="1"></stop>
+	</linearGradient>
+	<path id="Vector_bc" d="M 0.6642000079154968 12.68197345733643 L 14.76000022888184 0.4698190689086914 C 15.98999977111816 -0.5999788045883179 17.94160079956055 0.2723178863525391 17.94160079956055 1.926390051841736 L 17.94160079956055 8.361635208129883 C 30.79920196533203 8.509760856628418 41 11.09373569488525 41 23.3305778503418 C 41 28.26810646057129 37.82660293579102 33.1562614440918 34.32520294189453 35.71554565429688 C 33.23460388183594 36.51377868652344 31.67660331726074 35.50981903076172 32.07840347290039 34.21783065795898 C 35.71100234985352 22.56526184082031 30.35640144348145 19.47107887268066 17.93340110778809 19.29003524780273 L 17.93340110778809 26.35892868041992 C 17.93340110778809 28.02123069763184 15.98999977111816 28.88529586791992 14.75179958343506 27.81549835205078 L 0.6642000079154968 15.60334491729736 C -0.2214000225067139 14.82979869842529 -0.2214000225067139 13.44729042053223 0.6642000079154968 12.68197345733643 Z">
+	</path>2
+</svg></a> 
+<script>
+
+	const firebaseConfig = {
+
+};
+
+firebase.initializeApp(firebaseConfig);
+
+function GetUpdatedProfile(e) {
+	const value = `; ${document.cookie}`;
+const parts = value.split(`; username=`);
+if (parts.length === 2) {
+	 stringedUsername = parts.pop().split(';').shift()
+
+
+var UserSignInPass = firebase.database().ref('Users/' + stringedUsername + '/password');
+var UserSignInURL = firebase.database().ref('Users/' + stringedUsername + '/profileURL');
+UserSignInPass.on('value', (snapshotPass) => { 
+UserSignInURL.on('value', (snapshotURL) => { 
+
+  const password = snapshotPass.val();
+   imgURL = snapshotURL.val();
+  console.log(imgURL)
+  UpdateProfile(imgURL, stringedUsername);
+
+console.log(password)
+});
+}
+)}
+}
+function UpdateProfile(imgURL, stringedUsername) {
+	const value = `; ${document.cookie}`;
+const parts = value.split(`; SelectedOdds=`);
+if (parts.length === 2) {
+	const stringedkey = parts.pop().split(';').shift()
+
+	const xhr = new XMLHttpRequest();
+    
+	xhr.open('GET', `https://api.the-odds-api.com/v4/sports/${stringedkey}/odds/?apiKey=1fda9fb81d597013d070af60bbebeb12&regions=us&oddsFormat=american&markets=h2h,spreads,totals`,true);
+	xhr.onload = data => {
+      parseData(xhr.response);
+	  console.log(data)
+    }
+  
+    xhr.send();
+    function parseData(unParsed) {
+    let data = JSON.parse(unParsed);
+	console.log(data)
+	for (var i = 0; i < data.length; i ++) {
+	 let Odd = data[i].bookmakers.forEach(odd => {
+		document.getElementById("t").innerHTML= `${data[0].sport_title} - Upcoming Games`
+		 if (odd.key == "barstool") {
+
+
+			
+			 let home_team = odd.markets[0].outcomes[0].name
+			 let home_teamH2H = odd.markets[0]?.outcomes[0]?.price //Always
+
+			 let home_teamSPREADS = odd.markets[1]?.outcomes[0]?.price
+
+
+			 let home_teamTOTALS = odd.markets[2]?.outcomes[0]?.price
+
+			 let away_team = odd.markets[0].outcomes[1].name//Always
+			 let away_teamH2H = odd.markets[0]?.outcomes[1]?.price 
+
+			 let away_teamSPREADS = odd.markets[1]?.outcomes[1]?.price
+
+			 let away_teamTOTALS = odd.markets[2]?.outcomes[1]?.price
+			
+
+
+
+				/*	if (home_teamPTS >= 2) {
+						 home_teamPTSN= (home_teamPTS - 1) * 100;
+					} else {
+						 home_teamPTSN = 100 / (1 - home_teamPTS);
+					}
+					if (away_teamPTS >= 2) {
+						 away_teamPTSN  = (away_teamPTS - 1) * 100;
+					} else {
+						 away_teamPTSN = 100 / (1 - away_teamPTS);
+					}
+					*/		
+
+				console.log(`${away_team} $${away_teamH2H} VS ${home_team} $${home_teamH2H}`)
+				document.getElementById('b').innerHTML +=`
+				<hr><br>
+				${away_team}  <br><br> <button id='${away_team} | ${away_teamSPREADS}'; class="button-82-pushable" role="button" onclick='PayUp(this.id) '>
+				<span class="button-82-shadow"></span>
+				<span class="button-82-edge"></span>
+				<span class="button-82-front text">
+					${away_teamSPREADS}
+				</span>
+ 			 </button> 
+
+			  <button id='${away_team} | ${away_teamTOTALS}}'; class="button-82-pushable" role="button" onclick='PayUp(this.id) '>
+				<span class="button-82-shadow"></span>
+				<span class="button-82-edge"></span>
+				<span class="button-82-front text">
+					${away_teamTOTALS}
+				</span>
+ 			 </button> 
+
+			  <button id='${away_team} | ${away_teamH2H}'; class="button-82-pushable" role="button" onclick='PayUp(this.id) '>
+				<span class="button-82-shadow"></span>
+				<span class="button-82-edge"></span>
+				<span class="button-82-front text">
+					${away_teamH2H}
+				</span>
+ 			 </button> <br><br>
+
+			`
+			
+			document.getElementById('d').innerHTML +=` 
+			<hr><br>
+			  ${home_team} <br><br><button id='${home_team} | ${home_teamSPREADS}'; class="button-82-pushable" role="button" onclick='PayUp(this.id) '>
+				<span class="button-82-shadow"></span>
+				<span class="button-82-edge"></span>
+				<span class="button-82-front text">
+					${home_teamSPREADS}
+				</span>
+ 			 </button> 
+
+			  <button id='${home_team} | ${home_teamTOTALS}'; class="button-82-pushable" role="button" onclick='PayUp(this.id) '>
+				<span class="button-82-shadow"></span>
+				<span class="button-82-edge"></span>
+				<span class="button-82-front text">
+					${home_teamTOTALS}
+				</span>
+ 			 </button> 
+
+			  <button id='${home_team} | ${home_teamH2H}'; class="button-82-pushable" role="button" onclick='PayUp(this.id) '>
+				<span class="button-82-shadow"></span>
+				<span class="button-82-edge"></span>
+				<span class="button-82-front text">
+					${home_teamH2H}
+				</span>
+ 			 </button>  <br> <br>`
+			
+			
+		 }
+	 })
+}
+
+			document.body.innerHTML = document.body.innerHTML.replace(/undefined/g, "N/a")
+			 console.log('running')
+			 
+	}
+	document.getElementById("USERNAME").innerHTML = stringedUsername;
+	document.getElementById("Ellipse_1_cn").src = imgURL;
+
+}
+		}
+function PayUp(clicked_id)  {
+	console.log(clicked_id)
+
+const {value: formValues} = Swal.fire({
+  title: clicked_id,
+  input: 'number',
+  inputLabel: 'Enter amount below',
+  showCancelButton: true,
+  inputAttributes: {
+    min: 1,
+    max: 10000,
+    step: 1
+  },
+}).then((result) => {
+    if (result.value) {
+		var date = Math.round(new Date().getTime()/1000)
+console.log(date)
+		writeUserData()
+		
+
+	function writeUserData(WagerProfileURL, WagerTimestamp, WagerUsername, WagerType, WagerTeam, WagerStatus) {
+
+	var text = "";
+	var possible = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+ 	for (var i = 0; i < 15; i++)
+	text += possible.charAt(Math.floor(Math.random() * possible.length));
+	console.log(text);
+
+
+		firebase.database().ref('Wagers/' + `${text}`).set({
+    profileURL: imgURL,
+	userUsername: stringedUsername,
+    timestamp: Math.round(new Date().getTime()/1000),
+    username : stringedUsername,
+	wager: result.value,
+	wagerStatus: false,
+	wagerTeam: clicked_id,
+	id: text,
+
+  });
+  console.log('Data added')
+}
+	}
+})
+}
+
+</script>
+</body>
+</html>

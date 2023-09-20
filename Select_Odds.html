@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title onload="GetSports()">Select Odds</title>
+<link rel="stylesheet" type="text/css" id="applicationStylesheet" href="/css/Select_Odds.css"/>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.4.17/dist/sweetalert2.all.min.js"></script>
+<link rel="stylesheet" href="@sweetalert2/theme-dark/dark.css">
+<script src="sweetalert2/dist/sweetalert2.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/7.14.1-0/firebase.js"></script>
+<script id="applicationScript" type="text/javascript" src="/js/Select_Odds.js"></script>
+<script>
+	if (document.documentElement.clientWidth <760) {
+	 window.location = "./Mobile_Select_Odds.html";
+	}
+	</script>
+</head>
+<body onload="GetUpdatedProfile()">		
+	</body>
+<div id="Select_Odds">
+	<div id="Title_bf">
+		<div id="WINNING___WAGERS_bg">
+			<span>WINNING <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;        WAGERS</span>
+		</div>
+	</div>
+	<div id="Odds_Section_bh">
+		<section> 
+			<b id="b">  </b>
+		</section>
+	
+		</div>
+		
+	
+	</div>
+	<div id="Profile_cm">
+		<ellipse id="Ellipse_1_cqn">
+		<img src='' alt="Avatar" class="Ellipse_1_cn" id="Ellipse_1_cn">
+
+			</ellipse>
+		</svg>
+		<div id="USERNAME_co">
+			<span>USERNAME</span>
+		</div>
+	</div>
+</div>
+
+
+<script>
+
+	const firebaseConfig = {
+
+};
+
+firebase.initializeApp(firebaseConfig);
+
+function GetUpdatedProfile(e) {
+	const value = `; ${document.cookie}`;
+const parts = value.split(`; username=`);
+if (parts.length === 2) {
+	const stringedUsername = parts.pop().split(';').shift()
+
+
+var UserSignInPass = firebase.database().ref('Users/' + stringedUsername + '/password');
+var UserSignInURL = firebase.database().ref('Users/' + stringedUsername + '/profileURL');
+UserSignInPass.on('value', (snapshotPass) => { 
+UserSignInURL.on('value', (snapshotURL) => { 
+
+  const password = snapshotPass.val();
+  const imgURL = snapshotURL.val();
+  console.log(imgURL)
+  UpdateProfile(imgURL, stringedUsername);
+
+console.log(password)
+});
+}
+)}
+}
+function UpdateProfile(imgURL, stringedUsername) {
+	const xhr = new XMLHttpRequest();
+    xhr.open('GET', `https://api.the-odds-api.com/v4/sports/?apiKey=1fda9fb81d597013d070af60bbebeb12`,true);
+	xhr.onload = data => {
+      parseData(xhr.response);
+    }
+  
+    xhr.send();
+    function parseData(unParsed) {
+    let data = JSON.parse(unParsed);
+	console.log(data)
+	for (var i = 0; i < data.length; i ++) {
+     let TitleString = data[i].title 
+	 let htmlString = data[i].key 
+	 document.getElementById('b').innerHTML +=` <button onclick='toNextPage(this.id)' id='${htmlString}' role='button' class='button-78' type="click"> ${TitleString}</button>`;
+	 console.log(htmlString)
+}
+	}
+  
+
+	let cookieUsername = document.cookie;
+	document.getElementById("USERNAME_co").innerHTML = stringedUsername;
+	document.getElementById("Ellipse_1_cn").src = imgURL;
+
+
+}
+
+function getInputVal(id) {
+return document.getElementById(id).value
+
+}
+
+function toNextPage(clicked_id)  {
+	document.cookie = `SelectedOdds=${clicked_id}; path=/`;
+	location.href = '/Odds.html';  }
+
+
+
+</script>
+
+
+</body>
+</html><!-- HTML !-->
+

@@ -1,0 +1,152 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo:wght@800&display=swap');
+
+.mediaViewInfo {
+	--web-view-name: Admin Dashboard;
+	--web-view-id: Admin_Dashboard;
+	--web-scale-to-fit: true;
+	--web-scale-to-fit-type: width;
+	--web-enable-scale-up: true;
+	--web-scale-on-resize: true;
+	--web-enable-deep-linking: true;
+}
+:root {
+	--web-view-ids: Admin_Dashboard;
+}
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	border: none;
+}
+
+.swal2-input {
+
+	font-family: 'Archivo';
+}
+
+.swal2-input-label {
+	font-family: 'Archivo';
+}
+
+#Admin_Dashboard {
+	position: absolute;
+	width: 1280px;
+	height: 815px;
+	background-color: rgba(26,26,29,1);
+	overflow: hidden;
+	--web-view-name: Admin Dashboard;
+	--web-view-id: Admin_Dashboard;
+	--web-scale-to-fit: true;
+	--web-scale-to-fit-type: width;
+	--web-enable-scale-up: true;
+	--web-scale-on-resize: true;
+	--web-enable-deep-linking: true;
+}
+#Title_fy {
+	position: absolute;
+	width: 156px;
+	height: 80px;
+	left: 26px;
+	top: 14px;
+	overflow: visible;
+}
+#WINNING___WAGERS_fz {
+	left: 0px;
+	top: 0px;
+	position: absolute;
+	overflow: visible;
+	width: 157px;
+	height: 80px;
+	text-align: left;
+	font-family: Archivo;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 20px;
+	color: rgba(255,255,255,1);
+}
+#Manage_Section_f {
+	position: absolute;
+	width: 996px;
+	height: 547px;
+	left: 142px;
+	top: 162px;
+	overflow: visible;
+}
+#Rectangle_1_f {
+	fill: rgba(217,217,217,0);
+	stroke: rgba(149,7,64,1);
+	stroke-width: 3px;
+	stroke-linejoin: miter;
+	stroke-linecap: butt;
+	stroke-miterlimit: 4;
+	shape-rendering: auto;
+}
+.Rectangle_1_f {
+	position: absolute;
+	overflow: visible;
+	width: 996px;
+	height: 547px;
+	left: 0px;
+	top: 0px;
+}
+#Manage_Bets_f {
+	left: 85px;
+	top: 153px;
+	position: absolute;
+	overflow: visible;
+	width: 141px;
+	height: 26px;
+	text-align: left;
+	font-family: Archivo;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 20px;
+	color: rgba(255,255,255,1);
+}
+#Manage_Users_f {
+	left: 82px;
+	top: 315px;
+	position: absolute;
+	overflow: visible;
+	width: 147px;
+	height: 24px;
+	text-align: left;
+	font-family: Archivo;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 20px;
+	color: rgba(255,255,255,1);
+}
+#Admin_Profile_f {
+	position: absolute;
+	width: 185px;
+	height: 44px;
+	left: 1045px;
+	top: 20px;
+	overflow: visible;
+}
+#Ellipse_1_f {
+	fill: rgba(217,217,217,1);
+}
+.Ellipse_1_f {
+	position: absolute;
+	overflow: visible;
+	width: 44px;
+	height: 44px;
+	left: 0px;
+	top: 0px;
+}
+#USERNAME_f {
+	left: 62px;
+	top: 9px;
+	position: absolute;
+	overflow: visible;
+	width: 124px;
+	height: 25px;
+	text-align: left;
+	font-family: Archivo;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 18px;
+	color: rgba(255,255,255,1);
+}

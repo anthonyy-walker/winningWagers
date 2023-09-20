@@ -1,0 +1,297 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo:wght@800&display=swap');
+
+body {
+	background-color: #1A1A1D;
+}
+
+.mediaViewInfo {
+	--web-view-name: Admin Check In;
+	--web-view-id: Admin_Check_In;
+	--web-scale-to-fit: true;
+	--web-scale-to-fit-type: width;
+	--web-enable-scale-up: true;
+	--web-scale-on-resize: true;
+	--web-enable-deep-linking: true;
+}
+:root {
+	--web-view-ids: Admin_Check_In;
+}
+::-webkit-scrollbar {
+    display: none;
+}
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	border: none;
+}
+#Admin_Check_In {
+	position: absolute;
+	width: 1280px;
+	height: 815px;
+	background-color: rgba(26,26,29,1);
+	overflow: hidden;
+	--web-view-name: Admin Check In;
+	--web-view-id: Admin_Check_In;
+	--web-scale-to-fit: true;
+	--web-scale-to-fit-type: width;
+	--web-enable-scale-up: true;
+	--web-scale-on-resize: true;
+	--web-enable-deep-linking: true;
+}
+#Title_f {
+	position: absolute;
+	width: 332px;
+	height: 270.316px;
+	left: 129px;
+	top: 248px;
+	overflow: visible;
+}
+#Line_1_ga {
+	fill: transparent;
+	stroke: rgba(111,34,50,1);
+	stroke-width: 30px;
+	stroke-linejoin: miter;
+	stroke-linecap: butt;
+	stroke-miterlimit: 4;
+	shape-rendering: auto;
+}
+.Line_1_ga {
+	overflow: visible;
+	position: absolute;
+	width: 249px;
+	height: 1px;
+	transform: translate(-129px, -248px) matrix(1,0,0,1,96.7039,336.6582) rotate(137.782deg);
+	transform-origin: center;
+	left: 0px;
+	top: 0px;
+}
+
+
+#Login_BTN {
+	position: absolute;
+	background-color: #6f2232;
+	border-radius: 10px;
+	width: 122px;
+	height: 34px;
+	left: 346px;
+	top: 275px;
+	overflow: visible;
+}
+#Login_BTN:hover {
+	background-color: #c3073f;
+	transition: .5s;
+
+}
+
+
+#Line_2_gb {
+	fill: transparent;
+	stroke: rgba(111,34,50,1);
+	stroke-width: 30px;
+	stroke-linejoin: miter;
+	stroke-linecap: butt;
+	stroke-miterlimit: 4;
+	shape-rendering: auto;
+}
+#Username_Box {
+	position: absolute;
+	width: 343px;
+	height: 59px;
+	left: 125px;
+	top: 75px;
+	overflow: visible;
+}
+
+.Line_2_gb {
+	overflow: visible;
+	position: absolute;
+	width: 249px;
+	height: 1px;
+	transform: translate(-129px, -248px) matrix(1,0,0,1,195.7039,434.6582) rotate(137.782deg);
+	transform-origin: center;
+	left: 0px;
+	top: 0px;
+}
+#Line_3_gc {
+	fill: transparent;
+	stroke: rgba(111,34,50,1);
+	stroke-width: 30px;
+	stroke-linejoin: miter;
+	stroke-linecap: butt;
+	stroke-miterlimit: 4;
+	shape-rendering: auto;
+}
+.Line_3_gc {
+	overflow: visible;
+	position: absolute;
+	width: 388px;
+	height: 1px;
+	transform: translate(-129px, -248px) matrix(1,0,0,1,78.6752,378.3589) rotate(137.782deg);
+	transform-origin: center;
+	left: 0px;
+	top: 0px;
+}
+#WINNING___WAGERS_gd {
+	left: 0px;
+	top: 93px;
+	position: absolute;
+	overflow: hidden;
+	width: 333px;
+	height: 104px;
+	text-align: left;
+	font-family: Archivo;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 48px;
+	color: rgba(255,255,255,1);
+}
+#Login_Section_ge {
+	position: absolute;
+	width: 593px;
+	height: 357px;
+	left: 610px;
+	top: 215px;
+	overflow: visible;
+}
+#Rectangle_1_gf {
+	fill: rgba(217,217,217,0);
+	stroke: rgba(149,7,64,1);
+	stroke-width: 3px;
+	stroke-linejoin: miter;
+	stroke-linecap: butt;
+	stroke-miterlimit: 4;
+	shape-rendering: auto;
+}
+.Rectangle_1_gf {
+	position: absolute;
+	overflow: visible;
+	width: 593px;
+	height: 357px;
+	left: 0px;
+	top: 0px;
+}
+
+#Rectangle_3_c {
+	background: none;
+	fill: rgba(217,217,217,0.071);
+	stroke: rgba(255,255,255,1);
+	
+	stroke-width: 1px;
+	stroke-linejoin: miter;
+	stroke-linecap: butt;
+	stroke-miterlimit: 4;
+	shape-rendering: auto;
+}
+
+.swal2-input {
+
+	font-family: 'Archivo';
+}
+
+.swal2-input-label {
+	font-family: 'Archivo';
+}
+
+
+.Rectangle_3_c {
+	border-radius: 4px;
+	color: white;
+	padding-left: 40px;
+	background-color: #27272a;
+    transition: width 0.4s ease-in-out;
+	overflow: visible;
+	position: absolute;
+	width: 343px;
+	height: 59px;
+	left: 0px;
+	top: 0px;
+	transform: matrix(1,0,0,1,0,0);
+}
+
+.Rectangle_3_c:focus {
+	width: 120%;
+
+}
+
+
+#Login_BTN_gg {
+	position: absolute;
+	width: 122px;
+	height: 34px;
+	left: 346px;
+	top: 230px;
+	overflow: visible;
+}
+#Rectangle_4_gh {
+	fill: rgba(217,217,217,0.071);
+	stroke: rgba(255,255,255,1);
+	stroke-width: 1px;
+	stroke-linejoin: miter;
+	stroke-linecap: butt;
+	stroke-miterlimit: 4;
+	shape-rendering: auto;
+}
+.Rectangle_4_gh {
+	overflow: visible;
+	position: absolute;
+	width: 122px;
+	height: 34px;
+	left: 0px;
+	top: 0px;
+	transform: matrix(1,0,0,1,0,0);
+}
+#LOGIN_gi {
+	left: 35px;
+	top: 0.5px;
+	position: absolute;
+	overflow: visible;
+	width: 52px;
+	height: 33px;
+	text-align: left;
+	font-family: Archivo;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 15px;
+	color: rgba(255,255,255,1);
+}
+#Admin_Key_Box {
+	position: absolute;
+	width: 343px;
+	height: 59px;
+	left: 125px;
+	top: 149px;
+	overflow: visible;
+}
+#Rectangle_2_gk {
+	fill: rgba(217,217,217,0.071);
+	stroke: rgba(255,255,255,1);
+	stroke-width: 1px;
+	stroke-linejoin: miter;
+	stroke-linecap: butt;
+	stroke-miterlimit: 4;
+	shape-rendering: auto;
+}
+.Rectangle_2_gk {
+	overflow: visible;
+	position: absolute;
+	width: 343px;
+	height: 59px;
+	left: 0px;
+	top: 0px;
+	transform: matrix(1,0,0,1,0,0);
+}
+#Admin_Key {
+	left: 19px;
+	top: 21px;
+	position: absolute;
+	overflow: visible;
+	width: 82px;
+	height: 16px;
+	text-align: left;
+	font-family: Archivo;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 15px;
+	color: rgba(255,255,255,0.659);
+}

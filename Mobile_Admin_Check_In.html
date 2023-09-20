@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mobile Admin Check In</title>
+<link rel="stylesheet" type="text/css" id="applicationStylesheet" href="/css/Mobile_Admin_Check_In.css"/>
+<script id="applicationScript" type="text/javascript" src="/js/Mobile_Admin_Check_In.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.4.17/dist/sweetalert2.all.min.js"></script>
+<link rel="stylesheet" href="@sweetalert2/theme-dark/dark.css">
+<script src="sweetalert2/dist/sweetalert2.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/7.14.1-0/firebase.js"></script>
+<script>
+	if (document.documentElement.clientWidth >760) {
+	 window.location = "./Admin_Check_In.html";
+	}
+	</script>
+</head>
+<body>
+<div id="Mobile_Admin_Check_In">
+	<div id="Title_hz">
+		<svg class="Line_2_h" viewBox="0 0 106 10">
+		</svg>
+		<svg class="Line_4_h" viewBox="0 0 106 10">
+	
+		</svg>
+		<svg class="Line_3_h" viewBox="0 0 182 10">
+		
+		</svg>
+		<div id="WINNING___WAGERS_h">
+			<span>WINNING   <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;           WAGERS</span>
+		</div>
+	</div>
+	<div id="Login_Section_h">
+	
+		<div id="Login_BTN_h">
+			
+			
+		</div>
+	
+		<form action="" id="loginForm"> <div id="Login_Section_ef">
+			<svg class="Rectangle_1_eg">
+				<rect id="Rectangle_1_eg" rx="15" ry="15" x="0" y="0" width="316" height="357">
+				</rect>
+			</svg>
+				
+				
+			</input>
+		
+		<div id="Username_Box_en">
+			<input type="text" id='UsernameID' class="Rectangle_3_eo" placeholder="Username" name="username"> 
+				<div id="Username">
+				</div>
+			</div>		
+	
+			<button id="Login_BTN_eh" type="submit">Login</button> 
+	
+		</form>
+
+
+
+	</div>
+</div>
+
+<script>
+
+	const firebaseConfig = {
+};
+
+firebase.initializeApp(firebaseConfig);
+
+
+document.getElementById("loginForm").addEventListener("submit", submitForm)
+
+function submitForm(e) {
+e.preventDefault();
+let username = getInputVal('UsernameID')
+var UserSignIn = firebase.database().ref('Admins/' +  username + '/password');
+UserSignIn.on('value', (snapshot) => {
+  const data = snapshot.val();
+  
+  if (data == username) {
+	document.cookie = `AdminAccount=${username}; path=/`;
+	console.log(`connected to database, Admin Username: ${data}`)
+	location.href = '/Admin_Dashboard.html';
+
+  } else {
+	Swal.fire({
+		  icon: 'error',
+		  title: 'Oops...',
+		  text: 'Something went wrong!',
+		  footer: '<a href="https://support.google.com/accounts/answer/6009563?hl=en">Why do I have this issue?</a>',
+		
+})
+  }
+});
+
+}
+
+function getInputVal(id) {
+return document.getElementById(id).value
+
+}
+
+</script>
+
+</body>
+</html>

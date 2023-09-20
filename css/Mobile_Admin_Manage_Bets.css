@@ -1,0 +1,215 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo:wght@800&display=swap');
+
+.mediaViewInfo {
+	--web-view-name: Mobile Admin Manage Bets;
+	--web-view-id: Mobile_Admin_Manage_Bets;
+	--web-scale-to-fit: true;
+	--web-scale-to-fit-type: width;
+	--web-enable-scale-up: true;
+	--web-scale-on-resize: true;
+	--web-enable-deep-linking: true;
+}
+:root {
+	--web-view-ids: Mobile_Admin_Manage_Bets;
+}
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	border: none;
+}
+#Mobile_Admin_Manage_Bets {
+	position: absolute;
+	width: 414px;
+	height: 896px;
+	background-color: rgba(26,26,29,1);
+	overflow: hidden;
+	--web-view-name: Mobile Admin Manage Bets;
+	--web-view-id: Mobile_Admin_Manage_Bets;
+	--web-scale-to-fit: true;
+	--web-scale-to-fit-type: width;
+	--web-enable-scale-up: true;
+	--web-scale-on-resize: true;
+	--web-enable-deep-linking: true;
+}
+#Title_g {
+	position: absolute;
+	width: 156px;
+	height: 80px;
+	left: 26px;
+	top: 14px;
+	overflow: visible;
+}
+#WINNING___WAGERS_g {
+	left: 0px;
+	top: 0px;
+	position: absolute;
+	overflow: visible;
+	width: 157px;
+	height: 80px;
+	text-align: left;
+	font-family: Archivo;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 20px;
+	color: rgba(255,255,255,1);
+}
+#Profile_g {
+	position: absolute;
+	width: 185px;
+	height: 44px;
+	left: 229px;
+	top: 21px;
+	overflow: visible;
+}
+#Ellipse_1_g {
+	fill: rgba(217,217,217,1);
+}
+.Ellipse_1_g {
+	position: absolute;
+	overflow: visible;
+	width: 44px;
+	height: 44px;
+	left: 0px;
+	top: 0px;
+}
+#USERNAME_ha {
+	left: 62px;
+	top: 9px;
+	position: absolute;
+	overflow: visible;
+	width: 124px;
+	height: 25px;
+	text-align: left;
+	font-family: Archivo;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 18px;
+	color: rgba(255,255,255,1);
+}
+#Vector_hc {
+	fill: url(#Vector_hc);
+}
+.Vector_hc {
+	overflow: visible;
+	position: absolute;
+	width: 41px;
+	height: 40px;
+	left: 359px;
+	top: 841px;
+	transform: matrix(1,0,0,1,0,0);
+}
+#Manage_Section_hd {
+	position: absolute;
+	width: 371.124px;
+	height: 512px;
+	left: 21px;
+	top: 178px;
+	overflow: visible;
+}
+#Users_he {
+	position: absolute;
+	width: 371.124px;
+	height: 512px;
+	left: 0px;
+	top: 0px;
+	overflow: visible;
+}
+.swal2-input {
+
+	font-family: 'Archivo';
+}
+
+.swal2-input-label {
+	font-family: 'Archivo';
+}
+
+#Rectangle_7_hf {
+	fill: rgba(217,217,217,0);
+	stroke: rgba(5,255,0,1);
+	stroke-width: 1px;
+	stroke-linejoin: miter;
+	stroke-linecap: butt;
+	stroke-miterlimit: 4;
+	shape-rendering: auto;
+}
+.Rectangle_7_hf {
+	position: absolute;
+	overflow: visible;
+	width: 371.125px;
+	height: 512px;
+	left: 0px;
+	top: 0px;
+}
+#User_Profile_hg {
+	position: absolute;
+	width: 363px;
+	height: 44px;
+	left: 0px;
+	top: 39px;
+	overflow: visible;
+}
+#Ellipse_1_hh {
+	fill: rgba(217,217,217,1);
+}
+.Ellipse_1_hh {
+	position: absolute;
+	overflow: visible;
+	width: 44.122px;
+	height: 44px;
+	left: 0px;
+	top: 0px;
+}
+#n_0099_hi {
+	left: 62.171px;
+	top: 9px;
+	position: absolute;
+	overflow: visible;
+	width: 124.34px;
+	height: 25px;
+	text-align: left;
+	font-family: Archivo;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 18px;
+	color: rgba(255,255,255,1);
+	text-decoration: underline;
+}
+#Game_Name_hj {
+	left: 168px;
+	top: 9px;
+	position: absolute;
+	overflow: visible;
+	width: 124.34px;
+	height: 25px;
+	text-align: left;
+	font-family: Archivo;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 18px;
+	color: rgba(255,255,255,1);
+	text-decoration: underline;
+}
+#Edit_BTN_hk {
+	position: absolute;
+	width: 38.105px;
+	height: 28px;
+	left: 324.895px;
+	top: 1.5px;
+	overflow: visible;
+}
+#EDIT_hl {
+	left: 0px;
+	top: 0px;
+	position: absolute;
+	overflow: visible;
+	width: 39.105px;
+	height: 28px;
+	text-align: left;
+	font-family: Archivo;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 13px;
+	color: rgba(255,255,255,1);
+	text-decoration: underline;
+}

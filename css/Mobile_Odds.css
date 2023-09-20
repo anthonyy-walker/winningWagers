@@ -1,0 +1,277 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo:wght@800&display=swap');
+
+body {
+	background-color: #1A1A1D;
+}
+
+.mediaViewInfo {
+	--web-view-name: Mobile Odds;
+	--web-view-id: Mobile_Odds;
+	--web-scale-to-fit: true;
+	--web-scale-to-fit-type: width;
+	--web-enable-scale-up: true;
+	--web-scale-on-resize: true;
+	--web-enable-deep-linking: true;
+}
+:root {
+	--web-view-ids: Mobile_Odds;
+}
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	border: none;
+}
+
+.swal2-input {
+
+	font-family: 'Archivo';
+}
+
+.swal2-input-label {
+	font-family: 'Archivo';
+}
+
+
+#Mobile_Odds {
+	position: absolute;
+	width: 414px;
+	height: 896px;
+	background-color: rgba(26,26,29,1);
+	overflow: hidden;
+	--web-view-name: Mobile Odds;
+	--web-view-id: Mobile_Odds;
+	--web-scale-to-fit: true;
+	--web-scale-to-fit-type: width;
+	--web-enable-scale-up: true;
+	--web-scale-on-resize: true;
+	--web-enable-deep-linking: true;
+}
+#Title_c {
+	position: absolute;
+	width: 156px;
+	height: 80px;
+	left: 26px;
+	top: 14px;
+	overflow: visible;
+}
+#WINNING___WAGERS_da {
+	left: 0px;
+	top: 0px;
+	position: absolute;
+	overflow: visible;
+	width: 157px;
+	height: 80px;
+	text-align: left;
+	font-family: Archivo;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 20px;
+	color: rgba(255,255,255,1);
+}
+#Odds_Section_db {
+	position: absolute;
+	width: 363px;
+	height: 547px;
+	left: 26px;
+	top: 199px;
+	overflow: visible;
+}
+#Rectangle_1_dc {
+	fill: rgba(217,217,217,0);
+	stroke: rgba(149,7,64,1);
+	stroke-width: 3px;
+	stroke-linejoin: miter;
+	stroke-linecap: butt;
+	stroke-miterlimit: 4;
+	shape-rendering: auto;
+}
+.Rectangle_1_dc {
+	position: absolute;
+	overflow: visible;
+	width: 363px;
+	height: 547px;
+	left: 0px;
+	top: 0px;
+}
+#Team2_dd {
+	position: absolute;
+	width: 300.928px;
+	height: 44px;
+	left: 32.072px;
+	top: 312px;
+	overflow: visible;
+}
+#Rectangle_6_de {
+	fill: rgba(195,7,63,1);
+}
+.Rectangle_6_de {
+	position: absolute;
+	overflow: visible;
+	width: 203.81px;
+	height: 17px;
+	left: 0px;
+	top: 27px;
+}
+#PLACE_BET_df {
+	left: 56.082px;
+	top: 28px;
+	position: absolute;
+	overflow: visible;
+	width: 150.096px;
+	height: 15px;
+	text-align: left;
+	font-family: Archivo;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 13px;
+	color: rgba(255,255,255,1);
+}
+#T2____________dg {
+	left: 0px;
+	top: 0px;
+	position: absolute;
+	overflow: hidden;
+	width: 207.546px;
+	height: 20px;
+	text-align: left;
+	font-family: Archivo;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 17px;
+	color: rgba(255,255,255,1);
+}
+#Odds_T2_dh {
+	left: 203.81px;
+	top: 1px;
+	position: absolute;
+	overflow: visible;
+	width: 98.118px;
+	height: 18px;
+	text-align: left;
+	font-family: Archivo;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 17px;
+	color: rgba(255,96,96,1);
+}
+#Team1_di {
+	position: absolute;
+	width: 300.928px;
+	height: 46px;
+	left: 32.072px;
+	top: 149px;
+	overflow: visible;
+}
+#T1____________dj {
+	left: 0px;
+	top: 0px;
+	position: absolute;
+	overflow: hidden;
+	width: 207.546px;
+	height: 20px;
+	text-align: left;
+	font-family: Archivo;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 17px;
+	color: rgba(255,255,255,1);
+}
+#Rectangle_5_dk {
+	fill: rgba(195,7,63,1);
+}
+.Rectangle_5_dk {
+	position: absolute;
+	overflow: visible;
+	width: 203.81px;
+	height: 17px;
+	left: 1.368px;
+	top: 29px;
+}
+#PLACE_BET_dl {
+	left: 54.714px;
+	top: 30px;
+	position: absolute;
+	overflow: visible;
+	width: 150.096px;
+	height: 15px;
+	text-align: left;
+	font-family: Archivo;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 13px;
+	color: rgba(255,255,255,1);
+}
+#Odds_T1_dm {
+	left: 203.81px;
+	top: 1px;
+	position: absolute;
+	overflow: visible;
+	width: 98.118px;
+	height: 18px;
+	text-align: left;
+	font-family: Archivo;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 17px;
+	color: rgba(255,96,96,1);
+}
+#Profile_dn {
+	position: absolute;
+	width: 185px;
+	height: 44px;
+	left: 229px;
+	top: 21px;
+	overflow: visible;
+}
+#Ellipse_1_do {
+	fill: rgba(217,217,217,1);
+}
+.Ellipse_1_do {
+	position: absolute;
+	overflow: visible;
+	width: 44px;
+	height: 44px;
+	left: 0px;
+	top: 0px;
+}
+#USERNAME_dp {
+	left: 62px;
+	top: 9px;
+	position: absolute;
+	overflow: visible;
+	width: 124px;
+	height: 25px;
+	text-align: left;
+	font-family: Archivo;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 18px;
+	color: rgba(255,255,255,1);
+}
+#Vs_dq {
+	left: 26px;
+	top: 159px;
+	position: absolute;
+	overflow: visible;
+	width: 469px;
+	height: 38px;
+	text-align: left;
+	font-family: Archivo;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 20px;
+	color: rgba(255,255,255,1);
+}
+#Vector_ds {
+	fill: url(#Vector_ds);
+}
+.Vector_ds {
+	overflow: visible;
+	position: absolute;
+	width: 41px;
+	height: 40px;
+	left: 359px;
+	top: 841px;
+	transform: matrix(1,0,0,1,0,0);
+}

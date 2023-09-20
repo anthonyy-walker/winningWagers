@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mobile Login</title>
+<link rel="stylesheet" type="text/css" id="applicationStylesheet" href="/css/Mobile_Login.css"/>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.4.17/dist/sweetalert2.all.min.js"></script>
+<link rel="stylesheet" href="@sweetalert2/theme-dark/dark.css">
+<script src="sweetalert2/dist/sweetalert2.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/7.14.1-0/firebase.js"></script>
+<script id="applicationScript" type="text/javascript" src="/js/Mobile_Login.js"></script>
+</head>
+<body>
+<div id="Mobile_Login">
+	<div id="Title_ea">
+		<svg class="Line_2_eb" >
+			<path id="Line_2_eb" d="M 0 0 L 106 0">
+			</path>
+		</svg>
+		<svg class="Line_4" >
+			<path id="Line_4" d="M 0 0 L 106 0">
+			</path>
+		</svg>
+		<svg class="Line_3_ed">
+			<path id="Line_3_ed" d="M 0 0 L 182 0">
+			</path>
+		</svg>
+		<div id="WINNING___WAGERS_ee">
+			<span>WINNING    <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;             WAGERS</span>
+		</div>
+	</div>
+		</svg>
+
+		<form action="" id="loginForm"> <div id="Login_Section_ef">
+			<svg class="Rectangle_1_eg">
+				<rect id="Rectangle_1_eg" rx="15" ry="15" x="0" y="0" width="316" height="357">
+				</rect>
+			</svg>
+			<div id="Login_BTN_eh">
+				
+				
+			</div></input>
+			<div id="Password_Box_ek">
+				<input type="text" id='PasswordID' class="Rectangle_2_el" placeholder="Password" name="password"> 
+				<div id="Password_em">
+				</div>
+			</div>
+		<div id="Username_Box_en">
+			<input type="text" id='UsernameID' class="Rectangle_3_eo" placeholder="Username" name="username"> 
+				<div id="Username">
+				</div>
+			</div>		
+	
+			<button id="Login_BTN_eh" type="submit">Login</button> 
+	
+		</form>
+		
+		
+		</div>
+	</div>
+</div>
+
+<script>
+
+	const firebaseConfig = {
+};
+
+firebase.initializeApp(firebaseConfig);
+
+
+document.getElementById("loginForm").addEventListener("submit", submitForm)
+
+function submitForm(e) {
+e.preventDefault();
+let username = getInputVal('UsernameID')
+let password = getInputVal('PasswordID')
+var UserSignIn = firebase.database().ref('Users/' + username + '/password');
+UserSignIn.on('value', (snapshot) => {
+  const data = snapshot.val();
+  if (data == password) {
+	console.log(`connected to database, password: ${data}`)
+	location.href = '/Select_Odds.html';
+
+  } else {
+	Swal.fire({
+		  icon: 'error',
+		  title: 'Oops...',
+		  text: 'Something went wrong!',
+		  footer: '<a href="https://support.google.com/accounts/answer/6009563?hl=en">Why do I have this issue?</a>',
+})
+  }
+});
+
+}
+
+function getInputVal(id) {
+return document.getElementById(id).value
+
+}
+
+</script>
+</body>
+</html>
